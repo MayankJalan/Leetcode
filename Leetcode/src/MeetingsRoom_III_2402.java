@@ -6,7 +6,7 @@ public class MeetingsRoom_III_2402 {
     public int mostBooked(int n, int[][] meetings) {
 
         Arrays.sort(meetings, (a, b) -> a[0] - b[0]);
-        
+
         PriorityQueue<Integer> free=new PriorityQueue<>();
         PriorityQueue <int[]> worker=new PriorityQueue <>((a,b)-> (a[1] == b[1]) ? a[0] - b[0] : a[1] - b[1]);
         int ans[]=new int[n];
